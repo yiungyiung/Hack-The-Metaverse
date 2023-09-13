@@ -103,7 +103,7 @@ public class ObjectController : MonoBehaviour
     /// </summary>
     public void OnPointerClick()
     {
-        TeleportRandomly();
+        Debug.LogError("clicked");
     }
 
     /// <summary>
