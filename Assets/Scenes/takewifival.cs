@@ -23,7 +23,6 @@ public class takewifival : MonoBehaviour
     {
         // Handle received messages here
         Debug.Log("Received message: " + e.Data);
-        cr.ispress=e.Data;
     }
     private void OnDestroy()
     {
