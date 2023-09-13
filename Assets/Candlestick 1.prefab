@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2319686043395743496}
   - component: {fileID: 7923511731240160221}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Candlestick 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

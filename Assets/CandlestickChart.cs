@@ -11,11 +11,11 @@ private List<float> lowPrices = new List<float> { 3340.1f, 3346.3f, 3431.2f, 337
 
     private int currentIndex = -1;
     private float previousEnd = 0;
-    private float xOffset = 1.5f; // Set this to the desired distance between LineRenderers
-
+    private float xOffset = 0.5f; // Set this to the desired distance between LineRenderers
+int i=0;
     float alpha;
     public float height = 1000f;
-     private float interval = 10.0f;
+     private float interval = 2.0f;
     void Start()
     {
         float maxValue = Mathf.Max(Mathf.Max(openPrices.ToArray()), Mathf.Max(highPrices.ToArray()));
@@ -33,7 +33,11 @@ private List<float> lowPrices = new List<float> { 3340.1f, 3346.3f, 3431.2f, 337
     }
 
     void GenerateGraph()
-    {
+    {   i++;
+        if(i>18)
+        {
+            gameObject.transform.position=new Vector3(gameObject.transform.position.x+0.4f, gameObject.transform.position.y,gameObject.transform.position.z);
+        }
         if (currentIndex < openPrices.Count - 1)
         {
             currentIndex++;
@@ -42,7 +46,7 @@ private List<float> lowPrices = new List<float> { 3340.1f, 3346.3f, 3431.2f, 337
 
             // Calculate the height of the LineRenderer based on the difference between the opening and closing prices
             float height = (closePrices[currentIndex] - openPrices[currentIndex]);
-
+            lineRenderer.startWidth = lineRenderer.endWidth = lineRenderer.startWidth / 3;
             // Set the position of the LineRenderer
             Vector3 startPoint = new Vector3(currentIndex * xOffset,( previousEnd * 0.5f * alpha), 0);
             Vector3 endPoint = new Vector3(currentIndex * xOffset, ((previousEnd + height) * 0.5f * alpha), 0);
@@ -62,7 +66,7 @@ private List<float> lowPrices = new List<float> { 3340.1f, 3346.3f, 3431.2f, 337
             // Add high and low lines
             GameObject highLowLineObject = Instantiate(linePrefab);
             LineRenderer highLowLineRenderer = highLowLineObject.GetComponent<LineRenderer>();
-            highLowLineRenderer.startWidth = highLowLineRenderer.endWidth = highLowLineRenderer.startWidth / 8;
+            highLowLineRenderer.startWidth = highLowLineRenderer.endWidth = highLowLineRenderer.startWidth / 12;
 
             // Calculate the positions for the high and low lines
             Vector3 highPoint = new Vector3(currentIndex * xOffset, ((previousEnd + (highPrices[currentIndex] - openPrices[currentIndex])*20.0f/height)) * 0.5f * alpha, 0);

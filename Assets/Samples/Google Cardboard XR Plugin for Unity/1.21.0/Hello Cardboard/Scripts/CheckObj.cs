@@ -12,7 +12,9 @@ public class CheckObj : MonoBehaviour
         Book,
         Cheque,
         Cut,
+        Sticky,
     }
+    public bool changelable;
     public GameObject Book;
     [SerializeField]
     private Color inatctiveColor;
@@ -25,6 +27,7 @@ public class CheckObj : MonoBehaviour
     void Start()
     {
         myRenderer = GetComponent<MeshRenderer>();
+        if(changelable)
         myRenderer.material.color = inatctiveColor;
     }
 
@@ -34,6 +37,10 @@ public class CheckObj : MonoBehaviour
     public void OnPointerEnter()
     {
         GazeAt(true);
+        if (selectedButton == button.Sticky)
+        {
+            gameObject.transform.localScale=new Vector3(2.5f,2.5f, gameObject.transform.localScale.z);
+        }
     }
 
     /// <summary>
@@ -41,6 +48,10 @@ public class CheckObj : MonoBehaviour
     public void OnPointerExit()
     {
         GazeAt(false);
+        if (selectedButton == button.Sticky)
+        {
+            gameObject.transform.localScale=new Vector3(0.6f,0.6f, gameObject.transform.localScale.z);
+        }
     }
 
     public void OnPointerClick()
@@ -117,10 +128,12 @@ public class CheckObj : MonoBehaviour
     public void GazeAt(bool gazing)
     {
         if (gazing)
-        {
+        {   
+            if(changelable)
             myRenderer.material.color = gazedAtColor;
         }
         else
+            if(changelable)
             myRenderer.material.color = inatctiveColor;
     }
 }
