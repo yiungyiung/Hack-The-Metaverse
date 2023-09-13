@@ -7,6 +7,8 @@ using WebSocketSharp;
 public class takewifival : MonoBehaviour
 {
     private WebSocket ws;
+    public string butpress;
+    public CardboardReticlePointer cr;
     void Start()
     {
         // Replace with the IP address of your NodeMCU
@@ -21,6 +23,7 @@ public class takewifival : MonoBehaviour
     {
         // Handle received messages here
         Debug.Log("Received message: " + e.Data);
+        cr.ispress=e.Data;
     }
     private void OnDestroy()
     {
