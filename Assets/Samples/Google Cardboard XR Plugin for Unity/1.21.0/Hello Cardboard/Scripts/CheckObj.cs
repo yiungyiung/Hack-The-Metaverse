@@ -13,6 +13,7 @@ public class CheckObj : MonoBehaviour
         Cheque,
         Cut,
         Sticky,
+        whitebaord,
     }
     public bool changelable;
     public GameObject Book;
@@ -41,6 +42,10 @@ public class CheckObj : MonoBehaviour
         {
             gameObject.transform.localScale=new Vector3(2.5f,2.5f, gameObject.transform.localScale.z);
         }
+        if (selectedButton == button.whitebaord)
+        {
+            gameObject.transform.localScale=new Vector3(5f,5f, 0.1f);
+        }
     }
 
     /// <summary>
@@ -51,6 +56,10 @@ public class CheckObj : MonoBehaviour
         if (selectedButton == button.Sticky)
         {
             gameObject.transform.localScale=new Vector3(0.6f,0.6f, gameObject.transform.localScale.z);
+        }
+        if (selectedButton == button.whitebaord)
+        {
+            gameObject.transform.localScale=new Vector3(2f,2f,0.01f);
         }
     }
 
