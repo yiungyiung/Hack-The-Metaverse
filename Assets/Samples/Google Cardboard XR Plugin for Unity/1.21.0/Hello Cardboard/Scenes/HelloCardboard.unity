@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 127823473}
   - component: {fileID: 127823472}
   m_Layer: 3
-  m_Name: Plane
+  m_Name: cheque
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -224,10 +224,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396efd54ddefce04b9423770c2c42723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changelable: 0
+  ch: {fileID: 0}
+  changelable: 1
   Book: {fileID: 559266366}
-  inatctiveColor: {r: 0, g: 0, b: 0, a: 0}
-  gazedAtColor: {r: 0, g: 0, b: 0, a: 0}
+  inatctiveColor: {r: 0.5283019, g: 0.51085794, b: 0.51085794, a: 1}
+  gazedAtColor: {r: 0.5294118, g: 0.50980395, b: 0.50980395, a: 1}
   selectedButton: 6
 --- !u!64 &127823473
 MeshCollider:
@@ -302,7 +303,9 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -1.43, y: 3.91, z: 2.12}
   m_LocalScale: {x: 0.32450408, y: 0.1, z: 0.1}
-  m_Children: []
+  m_Children:
+  - {fileID: 328372863}
+  - {fileID: 1719053331}
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
@@ -453,6 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396efd54ddefce04b9423770c2c42723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ch: {fileID: 0}
   changelable: 0
   Book: {fileID: 0}
   inatctiveColor: {r: 1, g: 1, b: 1, a: 0}
@@ -658,11 +662,182 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396efd54ddefce04b9423770c2c42723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ch: {fileID: 1120393141}
   changelable: 1
   Book: {fileID: 0}
   inatctiveColor: {r: 0.10588236, g: 0.36078432, b: 0.21176472, a: 0}
   gazedAtColor: {r: 0.027450982, g: 0.121568635, b: 0.06666667, a: 1}
   selectedButton: 0
+--- !u!1 &328372862
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 328372863}
+  - component: {fileID: 328372865}
+  - component: {fileID: 328372864}
+  m_Layer: 0
+  m_Name: Totalearning
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &328372863
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328372862}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: -17.2}
+  m_LocalScale: {x: 3.0816255, y: 10, z: 10}
+  m_Children: []
+  m_Father: {fileID: 127823476}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 26.79, y: 0.6}
+  m_SizeDelta: {x: 20, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &328372864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328372862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Report
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278255396
+  m_fontColor: {r: 0.14149547, g: 1, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 4
+  m_fontSizeBase: 4
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -0.4366064, y: 0.29409337, z: 17.140825, w: 4.343245}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 328372865}
+  m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+--- !u!23 &328372865
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328372862}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &361616030
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,11 +962,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396efd54ddefce04b9423770c2c42723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changelable: 0
+  ch: {fileID: 1120393141}
+  changelable: 1
   Book: {fileID: 0}
   inatctiveColor: {r: 0, g: 0, b: 0, a: 0}
   gazedAtColor: {r: 0.18867922, g: 0.11836951, b: 0.11836951, a: 0}
-  selectedButton: 0
+  selectedButton: 3
 --- !u!1 &373218860
 GameObject:
   m_ObjectHideFlags: 0
@@ -916,11 +1092,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396efd54ddefce04b9423770c2c42723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ch: {fileID: 1120393141}
   changelable: 1
   Book: {fileID: 0}
   inatctiveColor: {r: 1, g: 0, b: 0, a: 1}
   gazedAtColor: {r: 0.5754717, g: 0.046146322, b: 0.046146322, a: 1}
-  selectedButton: 0
+  selectedButton: 1
 --- !u!1 &410781717
 GameObject:
   m_ObjectHideFlags: 0
@@ -953,6 +1130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396efd54ddefce04b9423770c2c42723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ch: {fileID: 0}
   changelable: 0
   Book: {fileID: 0}
   inatctiveColor: {r: 1, g: 1, b: 1, a: 0}
@@ -1066,6 +1244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396efd54ddefce04b9423770c2c42723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ch: {fileID: 0}
   changelable: 0
   Book: {fileID: 0}
   inatctiveColor: {r: 1, g: 1, b: 1, a: 0}
@@ -1204,19 +1383,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '6. Use limit orders to minimize losses.
+  m_text: '7.Trade like a machine leaving behind emotions (greed and fear)
 
-    7. Focus on 1-2 stocks per
-    session.
+    8.Enter
+    at the start of the trend. Otherwise, wait for the price to come to a certain
+    level
 
-    8. Skip day trading with limited time.
+    9.Don''t chase the price of stock or index with FOMO
 
-    9. Define your risk
-    capital.
-
-    10. Stay updated on market news and events.
-
-'
+    10.Work
+    more on trading psychology than technical or fundamental analysis'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1225,8 +1401,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278231551
-  m_fontColor: {r: 1, g: 0.63087213, b: 0, a: 1}
+    rgba: 4278243071
+  m_fontColor: {r: 1, g: 0.80784315, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1243,8 +1419,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7.54
-  m_fontSizeBase: 7.54
+  m_fontSize: 6.5
+  m_fontSizeBase: 6.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1361,6 +1537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396efd54ddefce04b9423770c2c42723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ch: {fileID: 0}
   changelable: 0
   Book: {fileID: 127823471}
   inatctiveColor: {r: 1, g: 1, b: 1, a: 0}
@@ -1448,7 +1625,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22602
+  m_Name: pb_Mesh89794
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1887,19 +2064,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '1. Avoid penny stocks.
-
-    2. Identify profitable patterns.
-
-    3. Trade
-    within a set account percentage.
-
-    4. Base decisions on logic, not emotion.
-
-    5.
-    Stick to your formula, avoid chasing profits.
-
-'
+  m_text: "1.Don't go against the trend of the market\n2.Don\u2019t be influenced
+    by some news, tips or social media information\n3.Use 10% of your capital for
+    a single trade\n4.Cut the losing trade with minimum loss\n5.Hold the profit trade
+    with trailing stop loss\n6.Don't trade on your assumptions"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1908,8 +2076,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278231551
-  m_fontColor: {r: 1, g: 0.63087213, b: 0, a: 1}
+    rgba: 4278243071
+  m_fontColor: {r: 1, g: 0.80784315, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1926,8 +2094,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7.54
-  m_fontSizeBase: 7.54
+  m_fontSize: 6.5
+  m_fontSizeBase: 6.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2064,7 +2232,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22640
+  m_Name: pb_Mesh89956
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3604,6 +3772,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   linePrefab: {fileID: 4471160662673432670, guid: 8385da4c937ce96458056bd71ecf9986, type: 3}
+  money: 10000
+  profit: 0
+  shares: 0
+  sharehas: 0
+  Tshares: {fileID: 1808779304}
+  moneys: {fileID: 1719053332}
   height: 25
 --- !u!1001 &1120839560
 PrefabInstance:
@@ -3865,6 +4039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396efd54ddefce04b9423770c2c42723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ch: {fileID: 0}
   changelable: 0
   Book: {fileID: 1396427284}
   inatctiveColor: {r: 1, g: 1, b: 1, a: 0}
@@ -6884,6 +7059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396efd54ddefce04b9423770c2c42723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ch: {fileID: 0}
   changelable: 0
   Book: {fileID: 1123945022}
   inatctiveColor: {r: 1, g: 1, b: 1, a: 0}
@@ -6999,7 +7175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ReticleSortingOrder: 32767
-  ispress: 
+  ispress: 0
   ReticleInteractionLayerMask:
     serializedVersion: 2
     m_Bits: 8
@@ -7424,6 +7600,176 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1668472020}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1719053330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1719053331}
+  - component: {fileID: 1719053333}
+  - component: {fileID: 1719053332}
+  m_Layer: 0
+  m_Name: Money
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1719053331
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719053330}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: -23.4}
+  m_LocalScale: {x: 3.0816255, y: 10, z: 10}
+  m_Children: []
+  m_Father: {fileID: 127823476}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 27.58, y: 0.6}
+  m_SizeDelta: {x: 20, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1719053332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719053330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Total Earnings
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278255396
+  m_fontColor: {r: 0.14149547, g: 1, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 2
+  m_fontSizeBase: 2
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -0.5851202, y: 0, z: 17.559692, w: 4.343245}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 1719053333}
+  m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+--- !u!23 &1719053333
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719053330}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -7987,6 +8333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396efd54ddefce04b9423770c2c42723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ch: {fileID: 0}
   changelable: 0
   Book: {fileID: 0}
   inatctiveColor: {r: 1, g: 1, b: 1, a: 0}
@@ -8100,6 +8447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396efd54ddefce04b9423770c2c42723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ch: {fileID: 0}
   changelable: 0
   Book: {fileID: 0}
   inatctiveColor: {r: 1, g: 1, b: 1, a: 0}
@@ -8305,11 +8653,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396efd54ddefce04b9423770c2c42723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changelable: 0
+  ch: {fileID: 1120393141}
+  changelable: 1
   Book: {fileID: 0}
   inatctiveColor: {r: 0, g: 0, b: 0, a: 0}
   gazedAtColor: {r: 0.18867922, g: 0.11836951, b: 0.11836951, a: 0}
-  selectedButton: 0
+  selectedButton: 2
 --- !u!1 &2063077870
 GameObject:
   m_ObjectHideFlags: 0

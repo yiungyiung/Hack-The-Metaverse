@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CheckObj : MonoBehaviour
 {
+  public CandlestickChart ch;
    public enum button{
         Buy,
         Sell,
@@ -40,7 +41,7 @@ public class CheckObj : MonoBehaviour
         GazeAt(true);
         if (selectedButton == button.Sticky)
         {
-            gameObject.transform.localScale=new Vector3(2.5f,2.5f, gameObject.transform.localScale.z);
+            gameObject.transform.localScale=new Vector3(2.5f,2.5f, 0.1f);
         }
         if (selectedButton == button.whitebaord)
         {
@@ -55,7 +56,7 @@ public class CheckObj : MonoBehaviour
         GazeAt(false);
         if (selectedButton == button.Sticky)
         {
-            gameObject.transform.localScale=new Vector3(0.6f,0.6f, gameObject.transform.localScale.z);
+            gameObject.transform.localScale=new Vector3(0.6f,0.6f,0.01f);
         }
         if (selectedButton == button.whitebaord)
         {
@@ -92,13 +93,15 @@ public class CheckObj : MonoBehaviour
     }
 
          void BuyFunction()
-    {
+    {   
+        ch.buy();
         // Add code for the "Buy" button functionality here.
         Debug.Log("Buy button clicked.");
     }
 
      void SellFunction()
-    {
+    {   
+        ch.sell();
         // Add code for the "Sell" button functionality here.
         Debug.Log("Sell button clicked.");
     }
@@ -106,11 +109,13 @@ public class CheckObj : MonoBehaviour
      void PlusFunction()
     {
         // Add code for the "Plus" button functionality here.
+        ch.upshares();
         Debug.Log("Plus button clicked.");
     }
 
      void MinusFunction()
-    {
+    {   
+        ch.downshares();
         // Add code for the "Minus" button functionality here.
         Debug.Log("Minus button clicked.");
     }
